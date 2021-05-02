@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExemplosKT", "ExemplosKT\ExemplosKT.csproj", "{2E8C0F97-4BD0-4C94-96D1-08A41701C358}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesUnitarios", "TestesUnitarios\TestesUnitarios.csproj", "{F0EEAC21-010A-4933-9DFF-F9C5119B5286}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E8C0F97-4BD0-4C94-96D1-08A41701C358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E8C0F97-4BD0-4C94-96D1-08A41701C358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E8C0F97-4BD0-4C94-96D1-08A41701C358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E8C0F97-4BD0-4C94-96D1-08A41701C358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0EEAC21-010A-4933-9DFF-F9C5119B5286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0EEAC21-010A-4933-9DFF-F9C5119B5286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0EEAC21-010A-4933-9DFF-F9C5119B5286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0EEAC21-010A-4933-9DFF-F9C5119B5286}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A256F38-054E-412A-9AA9-A135CA7F131A}
+	EndGlobalSection
+EndGlobal
