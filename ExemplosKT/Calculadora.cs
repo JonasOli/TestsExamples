@@ -27,5 +27,20 @@ namespace ExemplosKT
         {
             return a / b;
         }
+
+        public static long Fatorial(int numeroParaCalcular)
+        {
+            if (numeroParaCalcular < 0)
+            {
+                throw new FatorialNegativoException();
+            }
+
+            if (numeroParaCalcular == 0 || numeroParaCalcular == 1)
+            {
+                return 1;
+            }
+
+            return numeroParaCalcular * Fatorial(numeroParaCalcular - 1);
+        }
     }
 }

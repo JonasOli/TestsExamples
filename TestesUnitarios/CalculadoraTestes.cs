@@ -1,5 +1,4 @@
 using ExemplosKT;
-using System;
 using System.Collections.Generic;
 using Xunit;
 
@@ -13,10 +12,10 @@ namespace TestesUnitarios
         [InlineData(new double[] { double.NegativeInfinity, double.NegativeInfinity }, double.NegativeInfinity)]
         [InlineData(new double[] { }, 0)]
         [InlineData(null, 0)]
-        public void Soma_DeveSomarNumerosCorretamente(IEnumerable<double> numerosParaSomar, double resultadoEsperado)
+        public void Soma_DeveCalcularCorratamenteASomaDeNumeros(IEnumerable<double> numerosParaSomar, double resultadoEsperado)
         {
             // Act
-            double resultado = Calculadora.Soma(numerosParaSomar);
+            var resultado = Calculadora.Soma(numerosParaSomar);
 
             // Assert
             Assert.Equal(resultadoEsperado, resultado);
@@ -37,10 +36,12 @@ namespace TestesUnitarios
         }
 
         [Fact]
-        public void Fatorial_DeveLancarUmaExcecaoCasoONumeroPassadoSejaNegativo()
+        public void Fatorial_DeveLancarUmaExecacaoCasoNumeroSejaMenorQueZero()
         {
+            // Arrange
             int numeroNegativo = -10;
 
+            // Act & Assert
             Assert.Throws<FatorialNegativoException>(() => Calculadora.Fatorial(numeroNegativo));
         }
     }

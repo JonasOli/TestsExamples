@@ -9,6 +9,8 @@ using Xunit;
 
 namespace TestesIntegracao
 {
+    [CollectionDefinition("TestesIntegracao", DisableParallelization = true)]
+    [Collection("TestesIntegracao")]
     public class TesteIntegracaoBase : IClassFixture<ApiWebApplicationFactory>
     {
         private readonly string _connectionString;

@@ -65,7 +65,7 @@ namespace TestesIntegracao
             var usuario = await ExecObter<User>(@"
                 SELECT
                     Nome as Nome,
-                    Email as Email
+                    Email as Email,
                     Senha as Senha
                 FROM usuarios
                 where email = 'teste@teste.com'");

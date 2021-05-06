@@ -14,9 +14,9 @@ namespace TestesIntegracao
             // Conexao do banco de dados
             Environment.SetEnvironmentVariable("DATABASE_CONNECTION", "Server=localhost,1433;Database=testesIntegracao;User Id=SA;Password=Senh@1234;");
 
-            // Fazer rotas permitirem usuario anonimo
             builder.ConfigureServices(services =>
             {
+                // Fazer rotas permitirem usuario anonimo
                 services.AddMvcCore(options => options.Filters.Add(new AllowAnonymousFilter()));
             });
         }
