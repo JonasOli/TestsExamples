@@ -10,7 +10,7 @@ namespace ExemplosKT.ExemploConta
     {
         private readonly string _filePath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + "/ExemploConta/contas.json";
 
-        public async Task<Conta> ObterValorSaldoPorIdConta(int idConta)
+        public async Task<Conta> ObterContaPorId(int idConta)
         {
             var contas = await ObterContas();
 
@@ -36,11 +36,13 @@ namespace ExemplosKT.ExemploConta
 
         public async Task<IEnumerable<Conta>> ObterContas()
         {
-            using var fileReader = new StreamReader(_filePath);
+            //using var fileReader = new StreamReader(_filePath);
 
-            var jsonString = await fileReader.ReadToEndAsync();
+            //var jsonString = await fileReader.ReadToEndAsync();
 
-            return JsonConvert.DeserializeObject<IEnumerable<Conta>>(jsonString);
+            //return JsonConvert.DeserializeObject<IEnumerable<Conta>>(jsonString);
+
+            throw new System.Exception();
         }
     }
 }

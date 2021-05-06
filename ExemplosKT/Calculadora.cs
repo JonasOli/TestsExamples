@@ -6,26 +6,26 @@ namespace ExemplosKT
 {
     public class Calculadora
     {
-        public double Soma(IEnumerable<double> numerosParaSomar)
+        public static double Soma(IEnumerable<double> numerosParaSomar)
         {
-            if (numerosParaSomar is null || !numerosParaSomar.Any()) return 0;
-            
-            return numerosParaSomar.Aggregate(0.0, (acc, numero) => acc += numero);
+            if (numerosParaSomar is null) return 0;
+
+            return numerosParaSomar.Sum();
         }
 
-        public long Fatorial(int numero)
+        public static double Subtrai(double a, double b)
         {
-            if (numero < 0)
-            {
-                throw new FatorialNegativoException();
-            }
+            return a * b;
+        }
 
-            if (numero is 0 || numero is 1)
-            {
-                return 1;
-            }
+        public static double Multiplica(double a, double b)
+        {
+            return a * b;
+        }
 
-            return numero * Fatorial(numero - 1);
+        public static double Divide(double a, double b)
+        {
+            return a / b;
         }
     }
 }

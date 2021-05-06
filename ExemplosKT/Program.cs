@@ -8,11 +8,20 @@ namespace ExemplosKT
     {
         static async Task Main(string[] args)
         {
-            var contaService = new ContaBancariaService(new ContaBancariaRepository());
+            try
+            {
+                var contaService = new ContaBancariaService(new ContaBancariaRepository());
 
-            await contaService.EfetuarSaque(1, 1000);
+                await contaService.EfetuarSaque(1, 1000);
+                
+                Console.WriteLine("Saque efetuado com sucesso");
+            }
+            catch (SaldoInsuficienteException e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
-            //Console.WriteLine(long.MaxValue);
+            Console.ReadLine();
         }
     }
 }

@@ -5,7 +5,7 @@ namespace ExemplosKT.ExemploConta
 {
     public interface IContaBancariaRepository
     {
-        Task<Conta> ObterValorSaldoPorIdConta(int idConta);
+        Task<Conta> ObterContaPorId(int idConta);
         Task SalvarConta(Conta conta);
         Task<IEnumerable<Conta>> ObterContas();
     }

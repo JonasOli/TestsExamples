@@ -14,7 +14,7 @@ namespace ExemplosKT.ExemploConta
 
         public async Task EfetuarSaque(int idConta, double valorSaque)
         {
-            var conta = await _contaBancariaRepository.ObterValorSaldoPorIdConta(idConta);
+            var conta = await _contaBancariaRepository.ObterContaPorId(idConta);
 
             conta.Sacar(valorSaque);
 
