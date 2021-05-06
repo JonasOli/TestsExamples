@@ -38,7 +38,7 @@ namespace TesteIntegracao
             var users = await _sqlConnection.QueryAsync<User>(
                 @"SELECT
                     Nome as Nome,
-                    Email as Email
+                    Email as Email,
                     Senha as Senha
                 FROM usuarios"
             );
